@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "+XrTkEFcaybQBD5O1mQz6nl/vGaLEgvBwluz5RAl9seCnzNhOtvxXsSiw/u/B44aLqbCJTCdDtP238cD3l7ucw==",
+  "success": true,
+  "projectFilePath": "/Users/lucash.schuber/Desktop/C#/Moment3/MyDiary/MyDiary.csproj",
+  "expectedPackageFiles": [
+    "/Users/lucash.schuber/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

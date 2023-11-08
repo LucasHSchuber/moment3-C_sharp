@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "38AJ2MuykcUpW796en7VOQPFMznfaEzsM1B+8uyX7IJUi4QACBKv6L78y+VCfaFNIH3u5ZUDxfPQJVwJf20azA==",
+  "success": true,
+  "projectFilePath": "/Users/lucash.schuber/Desktop/C#/Moment3/MyDiary/YourLibraryName/YourLibraryName.csproj",
+  "expectedPackageFiles": [
+    "/Users/lucash.schuber/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "/Users/lucash.schuber/.nuget/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

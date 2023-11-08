@@ -1,0 +1,8 @@
+run:
+
+> dotnet new console -n MyConsoleApp 
+
+move into folder: 
+> cd >MyConsoleApp<
+
+> code .

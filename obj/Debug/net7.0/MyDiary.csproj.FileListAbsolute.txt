@@ -1,0 +1,17 @@
+/Users/lucash.schuber/Desktop/C#/Moment3/MyDiary/bin/Debug/net7.0/MyDiary
+/Users/lucash.schuber/Desktop/C#/Moment3/MyDiary/bin/Debug/net7.0/MyDiary.deps.json
+/Users/lucash.schuber/Desktop/C#/Moment3/MyDiary/bin/Debug/net7.0/MyDiary.runtimeconfig.json
+/Users/lucash.schuber/Desktop/C#/Moment3/MyDiary/bin/Debug/net7.0/MyDiary.dll
+/Users/lucash.schuber/Desktop/C#/Moment3/MyDiary/bin/Debug/net7.0/MyDiary.pdb
+/Users/lucash.schuber/Desktop/C#/Moment3/MyDiary/obj/Debug/net7.0/MyDiary.GeneratedMSBuildEditorConfig.editorconfig
+/Users/lucash.schuber/Desktop/C#/Moment3/MyDiary/obj/Debug/net7.0/MyDiary.AssemblyInfoInputs.cache
+/Users/lucash.schuber/Desktop/C#/Moment3/MyDiary/obj/Debug/net7.0/MyDiary.AssemblyInfo.cs
+/Users/lucash.schuber/Desktop/C#/Moment3/MyDiary/obj/Debug/net7.0/MyDiary.csproj.CoreCompileInputs.cache
+/Users/lucash.schuber/Desktop/C#/Moment3/MyDiary/obj/Debug/net7.0/MyDiary.dll
+/Users/lucash.schuber/Desktop/C#/Moment3/MyDiary/obj/Debug/net7.0/refint/MyDiary.dll
+/Users/lucash.schuber/Desktop/C#/Moment3/MyDiary/obj/Debug/net7.0/MyDiary.pdb
+/Users/lucash.schuber/Desktop/C#/Moment3/MyDiary/obj/Debug/net7.0/MyDiary.genruntimeconfig.cache
+/Users/lucash.schuber/Desktop/C#/Moment3/MyDiary/obj/Debug/net7.0/ref/MyDiary.dll
+/Users/lucash.schuber/Desktop/C#/Moment3/MyDiary/bin/Debug/net7.0/Newtonsoft.Json.dll
+/Users/lucash.schuber/Desktop/C#/Moment3/MyDiary/obj/Debug/net7.0/MyDiary.csproj.AssemblyReference.cache
+/Users/lucash.schuber/Desktop/C#/Moment3/MyDiary/obj/Debug/net7.0/MyDiary.csproj.CopyComplete

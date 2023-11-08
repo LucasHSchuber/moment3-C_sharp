@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+<PropertyGroup> <TargetFramework>netstandard2.0</TargetFramework> <LangVersion>11</LangVersion> <Nullable>enable</Nullable> <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+  
+  <ItemGroup> <ProjectReference Include=
+"../PacktLibraryNetStandard2/PacktLibraryNetStandard2. csproj" />
+                 </ItemGroup>
+                 
+<ItemGroup>
+<Using Include="System.Console" Static="true" />
+</ItemGroup> </Project>
