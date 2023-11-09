@@ -26,7 +26,7 @@ namespace GuestBookEntry
             while (true)
             {
 
-                Console.Clear(); // Clear console
+                Console.Clear();
 
                 Console.WriteLine("-----------------------------");
                 Console.WriteLine("L U C A S  G Ä S T B O K ");
@@ -78,9 +78,14 @@ namespace GuestBookEntry
 
         static void AddPost()
         {
+
+            Console.WriteLine("--------------");
+            Console.WriteLine("Add message:");
+            Console.WriteLine("--------------");
+
             Console.Write("Name: ");
             string name = Console.ReadLine();
-            // Validate if name is not null or empty before proceeding
+
             if (string.IsNullOrEmpty(name))
             {
                 Console.WriteLine("Enter a name.");
@@ -89,7 +94,7 @@ namespace GuestBookEntry
 
             Console.Write("Write a message: ");
             string message = Console.ReadLine();
-            // Validate if message is less than 1 characters before proceeding
+
             if (string.IsNullOrEmpty(message))
             {
                 Console.WriteLine("Message cannot be empty.");
@@ -101,21 +106,46 @@ namespace GuestBookEntry
 
             SaveData(guestBookEntries);
 
-            Console.WriteLine("Post written! Press enter to see the menu.");
-            Console.ReadLine(); // Wait for users input before menyn show
+            Console.WriteLine("Message written!");
+            Thread.Sleep(500);
+            Console.WriteLine("Press enter to return to menu");
+            Console.ReadLine();
 
         }
 
 
         static void ShowAllPosts()
         {
-            int Number = 1;
-            foreach (var data in guestBookEntries)
+
+            if (guestBookEntries != null && guestBookEntries.Count > 0)
             {
-                Console.WriteLine($"{Number}: Name: {data.Name}, Message: {data.Message}, Time: {data.Date}");
-                Number++;
+
+                Console.WriteLine(" ");
+                Console.WriteLine("--------------");
+                Console.WriteLine("ALL MESSAGES:");
+                Console.WriteLine("--------------");
+
+                int Number = 1;
+                foreach (var data in guestBookEntries)
+                {
+                    Console.WriteLine($"{Number}: Name: {data.Name}, Message: {data.Message}, Time: {data.Date}");
+                    Number++;
+                }
+                Console.WriteLine("--------------------------------------------------------------");
+                Console.WriteLine("Press enter to return to menu");
+                Console.ReadLine();
+
             }
-            Console.ReadLine(); // Vänta på användarens input innan menyn visas igen
+            else
+            {
+                Console.WriteLine("----");
+                Console.WriteLine("The guesbook is empty");
+                Console.WriteLine("----");
+                Thread.Sleep(1000);
+                Console.WriteLine("Press enter to return to menu");
+                Console.ReadLine();
+
+            }
 
         }
 
@@ -123,31 +153,67 @@ namespace GuestBookEntry
 
         static void RemovePost()
         {
-            Console.Write("Wich numbered post would you like to remove? ");
 
-            if (int.TryParse(Console.ReadLine(), out int index) && index > 0 && index <= guestBookEntries.Count)
+            if (guestBookEntries != null && guestBookEntries.Count > 0)
             {
-                // guestBookEntries.RemoveAt(index);
-                int index_new = index - 1;
-                guestBookEntries.RemoveAt(index_new);
 
-                Console.Write("Deleting.");
-                for (int i = 0; i < 3; i++)
+                Console.WriteLine(" ");
+                Console.WriteLine("----------------");
+                Console.WriteLine("DELETE MESSAGES:");
+                Console.WriteLine("----------------");
+                Console.WriteLine("Messages:");
+                Console.WriteLine("---------");
+                int Number = 1;
+                foreach (var data in guestBookEntries)
                 {
-                    Thread.Sleep(500);
-                    Console.Write(".");
+                    Console.WriteLine($"{Number}: Name: {data.Name}, Message: {data.Message}, Time: {data.Date}");
+                    Number++;
                 }
 
-                SaveData(new List<GuestBookEntry>());
+                Console.WriteLine("--------------------------------------------------------------");
+                Console.Write("Delete message number: ");
 
-                Thread.Sleep(500); // Pause for 1 second (1000 milliseconds)
-                Console.Write("The message has been deleted.");
+                if (int.TryParse(Console.ReadLine(), out int index) && index > 0 && index <= guestBookEntries.Count)
+                {
+                    // guestBookEntries.RemoveAt(index);
+                    int index_new = index - 1;
+                    guestBookEntries.RemoveAt(index_new);
+
+                    Console.Write("Deleting");
+                    for (int i = 0; i < 3; i++)
+                    {
+                        Thread.Sleep(500);
+                        Console.Write(".");
+                    }
+
+                    SaveData(new List<GuestBookEntry>());
+
+                    Thread.Sleep(1000);
+                    Console.WriteLine(" - The message has been deleted.");
+                    Thread.Sleep(1000);
+                    Console.WriteLine("Press enter to return to menu");
+                    Console.ReadLine();
+
+                }
+                else
+                {
+                    Console.WriteLine("Invalid index. Try again.");
+                }
 
             }
             else
             {
-                Console.WriteLine("Invalid index. Try again.");
+
+                Console.WriteLine("----");
+                Console.WriteLine("No messages to delete. The guesbook is empty");
+                Console.WriteLine("----");
+                Thread.Sleep(1000);
+                Console.WriteLine("Press enter to return to menu");
+                Console.ReadLine(); // Wait for user input before displaying the menu again
+
             }
+
+
         }
 
 
@@ -160,7 +226,7 @@ namespace GuestBookEntry
             }
             else
             {
-                // If the file doesn't exist, create a new JSON file with an empty list
+                
                 SaveData(new List<GuestBookEntry>());
                 return new List<GuestBookEntry>();
             }
@@ -191,7 +257,7 @@ namespace GuestBookEntry
             Console.Write("Saved succesfully!");
             Thread.Sleep(1000);
             Console.WriteLine();
-            Console.Write("Exiting guestbook. Please press enter to close...");
+            Console.Write("Exiting guestbook. Bye bye!");
 
             // Console.ReadLine();
             Environment.Exit(0);

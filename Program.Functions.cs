@@ -18,11 +18,11 @@ namespace MyDiary
                     case "Stockholms":
                         rate = 0.32M;
                         break;
-                    default: // most US states
+                    default: 
                         rate = 0.30M;
                         break;
                 }
-                // return sal - (sal * rate);
+               
                 int calculatedValue = sal - (int)(sal * rate);
                 return $"Salary: {sal}, County: {county}, Tax rate: {rate}, Final salarys: {calculatedValue}";
             }
